@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Simulado CP — Web Development</title>
+<style>
+:root{--bg:#f7f7f8;--card:#fff;--text:#17171a;--muted:#64646d;--line:#e7e7ea;--accent:#ed145b;--blue:#146ef5;--ok:#0a7a45;--warn:#9a5b00}*{box-sizing:border-box}body{margin:0;font:16px/1.6 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--bg);color:var(--text)}header{background:#09090b;color:#fff}.wrap{max-width:1060px;margin:auto;padding:0 24px}.hero{padding:64px 0 56px}.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:#ff5b8f;font-weight:800}.hero h1{font-size:clamp(38px,7vw,68px);line-height:1.02;margin:10px 0 18px;max-width:850px}.hero p{color:#c7c7cd;max-width:760px;font-size:19px}.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}.chip{border:1px solid #36363b;border-radius:999px;padding:7px 11px;color:#e9e9ed;font-size:13px}main{padding:38px 0 80px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px;margin:18px 0;box-shadow:0 8px 30px rgba(0,0,0,.035)}h2{font-size:27px;margin:0 0 14px}h3{font-size:19px;margin:26px 0 8px}.notice{border-left:4px solid var(--accent);background:#fff0f5;padding:16px 18px;border-radius:8px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.mini{padding:20px;border:1px solid var(--line);border-radius:14px;background:#fcfcfd}.mini strong{display:block;margin-bottom:4px}.score{display:grid;grid-template-columns:42px 1fr;gap:12px;align-items:start;padding:11px 0;border-bottom:1px solid var(--line)}.score:last-child{border:0}.num{width:34px;height:34px;border-radius:10px;background:#111;color:white;display:grid;place-items:center;font-weight:800}.route{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#f0f1f3;padding:2px 7px;border-radius:6px}.mock{border:1px solid #dfe2e8;border-radius:16px;overflow:hidden;background:#f4f6f9;box-shadow:0 12px 35px rgba(0,0,0,.08)}.mockbar{height:48px;background:#1769f6;color:white;display:flex;align-items:center;justify-content:space-between;padding:0 20px;font-weight:800}.mockbody{max-width:720px;margin:0 auto;padding:30px 18px 44px}.panel{background:white;border-radius:12px;padding:18px;box-shadow:0 4px 15px rgba(0,0,0,.06);margin-bottom:14px}.row{display:grid;grid-template-columns:1fr 1fr auto;gap:8px}.input{height:38px;border:1px solid #d9dde5;border-radius:7px;padding:8px;color:#8a8f99}.btn{background:#1769f6;color:#fff;border-radius:7px;padding:8px 14px;font-weight:700}.item{display:flex;justify-content:space-between;gap:16px;border-left:3px solid #1769f6}.small{font-size:13px;color:#747985}.actions{color:#1769f6;font-size:13px;white-space:nowrap}.danger{color:#e53d3d;margin-left:10px}.check li{margin:7px 0}.footer{color:#73737d;font-size:13px;text-align:center;padding:28px}@media(max-width:700px){.grid,.row{grid-template-columns:1fr}.hero{padding-top:42px}.card{padding:21px}}
+</style>
+</head>
+<body>
+<header><div class="wrap hero">
+<div class="eyebrow">FIAP • Simulado de preparação</div>
+<h1>Checkpoint — Web Development</h1>
+<p>Case inédito para treinar React e Next.js no estilo do CP: estado, efeitos, API, rotas, props, componentização e hooks de otimização.</p>
+<div class="chips"><span class="chip">Next.js</span><span class="chip">React</span><span class="chip">Axios + MockAPI</span><span class="chip">useState</span><span class="chip">useEffect</span><span class="chip">useRef</span><span class="chip">useMemo</span><span class="chip">useCallback</span><span class="chip">memo</span></div>
+</div></header>
+<main><div class="wrap">
+<section class="card">
+<h2>Checkpoint Simulado — Catálogo de Estudos</h2>
+<div class="notice"><strong>Atenção:</strong> faça o simulado sem consulta e sem ajuda durante a execução. O objetivo é descobrir o que você realmente consegue construir sozinho antes do CP.</div>
+<h3>Contexto do case</h3>
+<p>Você foi chamado para desenvolver um pequeno <strong>Catálogo de Estudos</strong>. O usuário deve cadastrar recursos de estudo, visualizar a lista, pesquisar recursos, abrir uma página de detalhes e excluir registros. Os dados devem ser persistidos em uma API criada no MockAPI.</p>
+</section>
+
+<section class="card"><h2>📌 Instruções gerais</h2>
+<ol class="check">
+<li>Gere o projeto usando <span class="route">create-next-app</span> e App Router.</li>
+<li>Use componentes funcionais e <span class="route">"use client"</span> quando necessário.</li>
+<li>Use <strong>Axios</strong> para conversar com a API do MockAPI.</li>
+<li>Crie commits separados e coerentes durante o desenvolvimento.</li>
+<li>Não use localStorage.</li>
+<li>Estilização é livre e não é o foco da avaliação.</li>
+<li>Comente apenas os blocos importantes, explicando <em>por que</em> o hook ou comportamento foi usado.</li>
+</ol></section>
+
+<section class="card"><h2>📝 O que fazer</h2>
+<h3>Páginas necessárias</h3>
+<ul><li><span class="route">/</span> — formulário, pesquisa e lista de recursos.</li><li><span class="route">/recursos/[id]</span> — detalhes de um recurso específico.</li></ul>
+<h3>Cada recurso deve possuir</h3>
+<div class="grid"><div class="mini"><strong>title</strong>Nome do recurso de estudo.</div><div class="mini"><strong>category</strong>Categoria, por exemplo React, Python ou IA.</div><div class="mini"><strong>description</strong>Descrição curta do conteúdo.</div><div class="mini"><strong>id</strong>Identificador fornecido pela API.</div></div>
+<h3>Funcionalidades obrigatórias</h3>
+<ul class="check">
+<li>Buscar os recursos da API quando a página principal carregar.</li>
+<li>Exibir estado de carregamento e uma mensagem caso a requisição falhe.</li>
+<li>Cadastrar um novo recurso e persistir o registro no MockAPI.</li>
+<li>Excluir um recurso específico da API.</li>
+<li>Pesquisar recursos pelo título sem alterar os dados originais.</li>
+<li>Abrir uma rota de detalhes usando o ID do recurso.</li>
+<li>Atualizar o título da aba do navegador na página de detalhes.</li>
+<li>Após cadastrar um recurso, colocar o foco novamente no primeiro campo do formulário.</li>
+<li>Evitar recriações desnecessárias onde fizer sentido, usando os hooks vistos em aula.</li>
+</ul>
+<div class="notice"><strong>Importante:</strong> o enunciado não diz em qual linha usar <code>useRef</code>, <code>useMemo</code>, <code>useCallback</code> ou <code>memo</code>. Parte do simulado é reconhecer onde cada ferramenta faz sentido.</div>
+</section>
+
+<section class="card"><h2>📸 Referência visual — Página principal</h2>
+<div class="mock"><div class="mockbar"><span>📚 Catálogo de Estudos</span><span>Início</span></div><div class="mockbody">
+<div class="panel"><strong>Novo recurso</strong><div style="height:10px"></div><div class="row"><div class="input">Título...</div><div class="input">Categoria...</div><div class="btn">Adicionar</div></div><div class="input" style="margin-top:8px;height:54px">Descrição...</div></div>
+<div class="panel"><div class="input">Buscar recursos...</div></div>
+<div class="panel item"><div><strong>React Hooks</strong><div class="small">React • Revisão de hooks essenciais para o CP</div></div><div class="actions">Ver detalhes <span class="danger">Excluir</span></div></div>
+<div class="panel item"><div><strong>APIs com Axios</strong><div class="small">Web • GET, POST e DELETE com MockAPI</div></div><div class="actions">Ver detalhes <span class="danger">Excluir</span></div></div>
+</div></div></section>
+
+<section class="card"><h2>📸 Referência visual — Detalhes</h2>
+<div class="mock"><div class="mockbar"><span>📚 Catálogo de Estudos</span><span>Início</span></div><div class="mockbody"><div class="panel"><div style="display:flex;justify-content:space-between;gap:20px"><strong>React Hooks</strong><span class="actions">← Voltar</span></div><p>Revisão de hooks essenciais para o CP.</p><hr style="border:0;border-top:1px solid #e5e7eb"><div class="small">Categoria: React</div></div></div></div></section>
+
+<section class="card"><h2>🏆 Critérios de avaliação</h2>
+<div class="score"><div class="num">1</div><div><strong>Estrutura e componentização</strong><br>Projeto organizado e componentes funcionais separados de forma coerente.</div></div>
+<div class="score"><div class="num">2</div><div><strong>useState</strong><br>Estados do formulário, lista, busca, loading e erro funcionando corretamente.</div></div>
+<div class="score"><div class="num">3</div><div><strong>useEffect + GET</strong><br>Carregamento inicial dos dados da API.</div></div>
+<div class="score"><div class="num">4</div><div><strong>POST</strong><br>Novo recurso persistido na API e refletido na interface.</div></div>
+<div class="score"><div class="num">5</div><div><strong>DELETE</strong><br>Exclusão pelo ID na API e atualização correta da interface.</div></div>
+<div class="score"><div class="num">6</div><div><strong>Router</strong><br>Navegação entre a lista e a rota dinâmica de detalhes.</div></div>
+<div class="score"><div class="num">7</div><div><strong>Props</strong><br>Dados e ações passados corretamente entre componentes.</div></div>
+<div class="score"><div class="num">8</div><div><strong>Hooks adicionais</strong><br>Uso justificável de useRef, useMemo e useCallback, além de memo quando apropriado.</div></div>
+<div class="score"><div class="num">9</div><div><strong>Estados da requisição</strong><br>Loading, sucesso e erro tratados na interface.</div></div>
+<div class="score"><div class="num">10</div><div><strong>Clareza e Git</strong><br>Código compreensível, comentários úteis e commits coerentes.</div></div>
+</section>
+
+<section class="card"><h2>⏱️ Regra do simulado</h2><p>Faça a primeira tentativa sem ChatGPT, documentação ou código anterior. Se travar, anote exatamente onde. A correção deve avaliar separadamente <strong>aprendizado</strong> e <strong>desempenho</strong>, além da nota técnica do projeto.</p></section>
+</div></main><div class="footer">Simulado de preparação • Web Development • 2026</div>
+</body></html>
